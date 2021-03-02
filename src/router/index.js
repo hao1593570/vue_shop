@@ -21,7 +21,14 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  routes
+  routes: [{
+    path: '/home', component: Home, redirect: '/welcome', children: [
+      { path: "/welcome", component: Welcome },
+      { path: "/users", component: Users },
+      { path: "/rights", component: Rights },
+      { path: "/roles", component: Roles }
+    ]
+  }]
 })
 
 export default router

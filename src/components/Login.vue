@@ -1,6 +1,5 @@
 <template>
   <div class="login_container">
-    <div>123123</div>
     <div class="login_box">
       <!-- 头像区域 -->
       <div class="avatar_box">
@@ -46,7 +45,7 @@ export default {
       // 这是登录表单的数据绑定对象
       loginForm: {
         username: 'admin',
-        password: '123456'
+        password: '123456',
       },
       // 这是表单的验证规则对象
       loginFormRules: {
@@ -57,8 +56,8 @@ export default {
             min: 3,
             max: 10,
             message: '长度在 3 到 10 个字符',
-            trigger: 'blur'
-          }
+            trigger: 'blur',
+          },
         ],
         // 验证密码是否合法
         password: [
@@ -67,10 +66,10 @@ export default {
             min: 6,
             max: 15,
             message: '长度在 6 到 15 个字符',
-            trigger: 'blur'
-          }
-        ]
-      }
+            trigger: 'blur',
+          },
+        ],
+      },
     }
   },
   methods: {
@@ -92,8 +91,8 @@ export default {
         // 2. 通过编程式导航跳转到后台主页，路由地址是 /home
         this.$router.push('/home')
       })
-    }
-  }
+    },
+  },
 }
 </script>
 
